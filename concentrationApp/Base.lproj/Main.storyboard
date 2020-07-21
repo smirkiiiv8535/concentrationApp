@@ -1,24 +1,250 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17132" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17105.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="concentrationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="memory" translatesAutoresizingMaskIntoConstraints="NO" id="6Vj-O5-c0e">
+                                <rect key="frame" x="15" y="64" width="129" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="nMa-Vy-747">
+                                <rect key="frame" x="303" y="73" width="47" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ywV-mF-DWL">
+                                <rect key="frame" x="346" y="73" width="60" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Memory Game" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dgf-mx-YAr">
+                                <rect key="frame" x="130" y="80" width="171" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remain Chance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6A6-09-l86">
+                                <rect key="frame" x="32" y="735" width="171" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tl3-8I-ecF">
+                                <rect key="frame" x="113" y="190" width="85" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="qMark"/>
+                                <connections>
+                                    <action selector="flipCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T0F-ek-TxH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAs-OC-Lda">
+                                <rect key="frame" x="15" y="190" width="85" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="qMark"/>
+                                <connections>
+                                    <action selector="flipCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u38-6c-10T"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MsO-p1-g2e">
+                                <rect key="frame" x="211" y="190" width="85" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="qMark"/>
+                                <connections>
+                                    <action selector="flipCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cwa-jh-Byt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfg-b0-a8C">
+                                <rect key="frame" x="116" y="330" width="85" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="qMark"/>
+                                <connections>
+                                    <action selector="flipCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9YL-vH-YN6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4OY-3D-Rq7">
+                                <rect key="frame" x="18" y="330" width="85" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="qMark"/>
+                                <connections>
+                                    <action selector="flipCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zcv-uy-HNc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ghc-TV-8h1">
+                                <rect key="frame" x="312" y="330" width="85" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="qMark"/>
+                                <connections>
+                                    <action selector="flipCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AyP-8U-69E"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1m-3g-xfD">
+                                <rect key="frame" x="214" y="330" width="85" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="qMark"/>
+                                <connections>
+                                    <action selector="flipCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BFc-OL-WAU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pT5-mz-Ujp">
+                                <rect key="frame" x="116" y="470" width="85" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="qMark"/>
+                                <connections>
+                                    <action selector="flipCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pwM-Xa-ygq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qeH-71-jcO">
+                                <rect key="frame" x="18" y="470" width="85" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="qMark"/>
+                                <connections>
+                                    <action selector="flipCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N6W-RG-e9c"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMV-Y0-7RK">
+                                <rect key="frame" x="312" y="470" width="85" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="qMark"/>
+                                <connections>
+                                    <action selector="flipCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5pn-LJ-1Kv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ao-MS-7N1">
+                                <rect key="frame" x="214" y="470" width="85" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="qMark"/>
+                                <connections>
+                                    <action selector="flipCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YsL-lA-tPE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tXd-pI-7pj">
+                                <rect key="frame" x="118" y="610" width="85" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="qMark"/>
+                                <connections>
+                                    <action selector="flipCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a4a-jb-q7n"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KEi-8Q-gMl">
+                                <rect key="frame" x="20" y="610" width="85" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="qMark"/>
+                                <connections>
+                                    <action selector="flipCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Sg-lb-5cm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Evc-47-JMX">
+                                <rect key="frame" x="314" y="610" width="85" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="qMark"/>
+                                <connections>
+                                    <action selector="flipCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fLx-ac-3wJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zrm-pk-zjX">
+                                <rect key="frame" x="216" y="610" width="85" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="qMark"/>
+                                <connections>
+                                    <action selector="flipCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Od6-FB-HNW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hgs-CF-Svj">
+                                <rect key="frame" x="130" y="808" width="142" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <state key="normal" title="Restart">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="restart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HgY-xG-Dch"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vsh-Oe-MtE">
+                                <rect key="frame" x="130" y="423" width="134" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.40000000000000002" green="0.84705882349999995" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="startPlaying:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PTc-NM-zcz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="14" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbr-FN-ZlT">
+                                <rect key="frame" x="236" y="737" width="60" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yzl-od-2Rt">
+                                <rect key="frame" x="309" y="190" width="85" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="qMark"/>
+                                <connections>
+                                    <action selector="flipCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kt7-4R-62w"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="eN3-QV-APD"/>
+                    <connections>
+                        <outlet property="chance" destination="rbr-FN-ZlT" id="7J5-rJ-vrG"/>
+                        <outlet property="countDown" destination="ywV-mF-DWL" id="S1J-Dq-wM2"/>
+                        <outlet property="popUpStart" destination="vsh-Oe-MtE" id="Nes-E1-ZnF"/>
+                        <outletCollection property="cardButtons" destination="KEi-8Q-gMl" collectionClass="NSMutableArray" id="cw2-RN-0bo"/>
+                        <outletCollection property="cardButtons" destination="eAs-OC-Lda" collectionClass="NSMutableArray" id="pel-eE-oma"/>
+                        <outletCollection property="cardButtons" destination="4OY-3D-Rq7" collectionClass="NSMutableArray" id="Ith-tJ-Zpp"/>
+                        <outletCollection property="cardButtons" destination="qeH-71-jcO" collectionClass="NSMutableArray" id="gff-3n-9Mx"/>
+                        <outletCollection property="cardButtons" destination="tl3-8I-ecF" collectionClass="NSMutableArray" id="bcM-Ad-dzi"/>
+                        <outletCollection property="cardButtons" destination="rfg-b0-a8C" collectionClass="NSMutableArray" id="Fvu-dt-2PD"/>
+                        <outletCollection property="cardButtons" destination="pT5-mz-Ujp" collectionClass="NSMutableArray" id="OhM-R8-TZT"/>
+                        <outletCollection property="cardButtons" destination="tXd-pI-7pj" collectionClass="NSMutableArray" id="yFs-nJ-avP"/>
+                        <outletCollection property="cardButtons" destination="MsO-p1-g2e" collectionClass="NSMutableArray" id="W6Q-G0-bpJ"/>
+                        <outletCollection property="cardButtons" destination="Yzl-od-2Rt" collectionClass="NSMutableArray" id="cjK-ok-4hs"/>
+                        <outletCollection property="cardButtons" destination="p1m-3g-xfD" collectionClass="NSMutableArray" id="pEb-5m-oF2"/>
+                        <outletCollection property="cardButtons" destination="Ghc-TV-8h1" collectionClass="NSMutableArray" id="ye4-NI-z58"/>
+                        <outletCollection property="cardButtons" destination="2ao-MS-7N1" collectionClass="NSMutableArray" id="Ly8-51-Us7"/>
+                        <outletCollection property="cardButtons" destination="dMV-Y0-7RK" collectionClass="NSMutableArray" id="PeD-kF-HtL"/>
+                        <outletCollection property="cardButtons" destination="Zrm-pk-zjX" collectionClass="NSMutableArray" id="kSk-ik-O1C"/>
+                        <outletCollection property="cardButtons" destination="Evc-47-JMX" collectionClass="NSMutableArray" id="pUT-A0-yY9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="138.61607142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="clock" width="512" height="512"/>
+        <image name="memory" width="512" height="512"/>
+        <image name="qMark" width="512" height="512"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
