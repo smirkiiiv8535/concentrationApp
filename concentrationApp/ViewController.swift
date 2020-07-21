@@ -186,6 +186,8 @@ class ViewController: UIViewController {
         self.pickedCardNum.removeAll()
         
         if(successPair==8){
+            time?.invalidate()
+            time = nil
             let popSuccess = UIAlertController(title: "恭喜過關", message: "再來一場！", preferredStyle: .alert)
             let successButton = UIAlertAction(title: "來啊來啊", style: .default) { (_) in
             self.restartHelper()
@@ -197,6 +199,8 @@ class ViewController: UIViewController {
     }
 
     func failedMission(){
+        time?.invalidate()
+        time = nil
         let alert = UIAlertController(title: "挑戰失敗", message: "再來一次了喔QQ ", preferredStyle: .alert)
         let alertButton = UIAlertAction(title: "Restart", style: .default) { (_) in
             self.restartHelper()
