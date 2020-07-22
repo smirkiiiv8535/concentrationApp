@@ -11,10 +11,10 @@ import UIKit
 import GameplayKit
 
 struct Card{
-    var cardName : String?
-    var cardImage : UIImage?
-    var canOpen : Bool = true
-    var hasOpen : Bool = false
+    var cardName : String?     // 卡片名, 後續比對時會使用
+    var cardImage : UIImage?   // 卡片的圖
+    var canOpen : Bool = true   //  紀錄卡片是否已經成對
+    var hasOpen : Bool = false  //  紀錄卡片是否能被翻
 }
 
 
