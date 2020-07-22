@@ -116,7 +116,6 @@ class ViewController: UIViewController {
     @objc func startPlayingHelper() -> Void {
         countDownTime-=1
         if(countDownTime == 0){
-            time?.invalidate()
             failedMission()
       }
         countDown.text = String(countDownTime)
@@ -153,10 +152,7 @@ class ViewController: UIViewController {
                 if(chanceNum==0){
                 failedMission()
                 }
-            
-                if pickedCardNum.contains(buttonNum) {
-                    pickedCardNum.removeAll()
-                }else{
+              
                 pickedCardNum.append(buttonNum)
                 cardBeenFliped(index:buttonNum)
 
@@ -165,6 +161,7 @@ class ViewController: UIViewController {
             Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.checkedCards), userInfo:nil, repeats: false)
                 
              }else if (cards[pickedCardNum[0]].cardName != cards[pickedCardNum[1]].cardName){
+                
                 Timer.scheduledTimer(withTimeInterval: 0.7, repeats: false) {
                  (_) in for(_,num) in self.pickedCardNum.enumerated() {
                     cardBeenFliped(index: num)
@@ -172,7 +169,7 @@ class ViewController: UIViewController {
                  self.pickedCardNum.removeAll()
                    }
              }
-    }
+    
             }
         }
         
@@ -223,6 +220,7 @@ class ViewController: UIViewController {
         chanceNum = 14
         chance.text = String(chanceNum)
         successPair = 0
+        
         for(i,_) in cardButtons.enumerated(){
             cardButtons[i].alpha = 1
         }
